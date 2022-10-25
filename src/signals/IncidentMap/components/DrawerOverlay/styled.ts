@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MPL-2.0
 // Copyright (C) 2022 Gemeente Amsterdam
-import { ChevronRight } from '@amsterdam/asc-assets'
+import { ChevronRight } from '@remcohoff/asc-assets'
 import {
   breakpoint,
   Button,
   styles,
   themeColor,
   themeSpacing,
-} from '@amsterdam/asc-ui'
+} from '@remcohoff/asc-ui'
 import styled, { css } from 'styled-components'
 
 import type { ModeProp } from './types'
@@ -181,7 +181,6 @@ export const CloseButton = styled(Button)`
   min-width: inherit;
   // Needs z-index else content blocks the onClick
   z-index: 1;
-  background-color: transparent;
 
   > span {
     margin-right: 0;

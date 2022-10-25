@@ -3,7 +3,7 @@
 
 import appConfiguration from 'shared/services/configuration/configuration'
 import { QuestionFieldType } from 'types/question'
-import type ConfigurationType from '../../../../../app.amsterdam.json'
+import type ConfigurationType from '../../../../../app.rotterdam.json'
 import locatie from './locatie'
 
 export const ICON_SIZE = 40

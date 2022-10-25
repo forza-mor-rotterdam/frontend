@@ -8,9 +8,10 @@ import {
   breakpoint,
   Paragraph,
   ascDefaultTheme,
-} from '@amsterdam/asc-ui'
+} from '@remcohoff/asc-ui'
 import LoadingIndicator from 'components/LoadingIndicator'
 import AppContext from 'containers/App/context'
+import { Wizard, Steps, Step } from 'react-albus'
 import { FormProvider, useForm } from 'react-hook-form'
 import { Route } from 'react-router-dom'
 import type {
@@ -26,7 +27,6 @@ import type { Incident } from 'types/incident'
 
 import IncidentForm from '../IncidentForm'
 import IncidentPreview from '../IncidentPreview'
-import { Wizard, Steps, Step } from '../StepWizard'
 import onNext from './services/on-next'
 import {
   FormWrapper,
@@ -160,8 +160,8 @@ const IncidentWizard: FC<IncidentWizardProps> = ({
                                   updateIncident={updateIncident}
                                   addToSelection={addToSelection}
                                   removeFromSelection={removeFromSelection}
-                                  wizard={wizardDefinition}
                                   createIncident={createIncident}
+                                  wizard={wizardDefinition}
                                 />
                               )}
                             </FormWrapper>

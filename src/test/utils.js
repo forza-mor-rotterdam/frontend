@@ -3,7 +3,7 @@
 // eslint-disable-next-line no-restricted-imports
 import React from 'react'
 
-import { ThemeProvider } from '@amsterdam/asc-ui'
+import { ThemeProvider } from '@remcohoff/asc-ui'
 import { ConnectedRouter } from 'connected-react-router/immutable'
 import MapContext from 'containers/MapContext'
 import { createMemoryHistory } from 'history'
@@ -89,6 +89,20 @@ export const FormProviderWithResolver = ({
     </FormProvider>
   )
 }
+
+// eslint-disable-next-line
+export const withCustomAppContext =
+  (Component) =>
+  ({ themeCfg = {}, storeCfg = {}, routerCfg = {} }) =>
+    (
+      <ThemeProvider {...themeCfg}>
+        <Provider store={store} {...storeCfg}>
+          <ConnectedRouter history={history} {...routerCfg}>
+            {Component}
+          </ConnectedRouter>
+        </Provider>
+      </ThemeProvider>
+    )
 
 /**
  * Get a list of users from JSON data that is coming from the API endpoint

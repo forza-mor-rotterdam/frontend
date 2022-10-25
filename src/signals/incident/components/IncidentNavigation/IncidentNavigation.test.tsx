@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MPL-2.0
 // Copyright (C) 2018 - 2022 Gemeente Amsterdam
 import { render, fireEvent, act } from '@testing-library/react'
+import { Wizard, Steps, Step } from 'react-albus'
 import * as auth from 'shared/services/auth/auth'
 import wizardDefinition from 'signals/incident/definitions/wizard'
 import { withAppContext, history } from 'test/utils'
 
 import IncidentNavigation from '.'
-import { Wizard, Steps, Step } from '../StepWizard'
 
 jest.mock('shared/services/auth/auth', () => ({
   __esModule: true,
@@ -42,10 +42,9 @@ describe('signals/incident/components/IncidentNavigation', () => {
       withAppContext(
         <Wizard history={history}>
           <Steps>
-            <Step
-              id={steps[0]}
-              render={() => <IncidentNavigation {...props} />}
-            />
+            <Step id={steps[0]}>
+              <IncidentNavigation {...props} />
+            </Step>
           </Steps>
         </Wizard>
       )
@@ -60,10 +59,9 @@ describe('signals/incident/components/IncidentNavigation', () => {
       withAppContext(
         <Wizard history={history}>
           <Steps>
-            <Step
-              id={steps[1]}
-              render={() => <IncidentNavigation {...props} />}
-            />
+            <Step id={steps[1]}>
+              <IncidentNavigation {...props} />
+            </Step>
           </Steps>
         </Wizard>
       )
@@ -80,10 +78,9 @@ describe('signals/incident/components/IncidentNavigation', () => {
       withAppContext(
         <Wizard history={history}>
           <Steps>
-            <Step
-              id={lastStep}
-              render={() => <IncidentNavigation {...props} />}
-            />
+            <Step id={lastStep}>
+              <IncidentNavigation {...props} />
+            </Step>
           </Steps>
         </Wizard>
       )
@@ -98,10 +95,9 @@ describe('signals/incident/components/IncidentNavigation', () => {
       withAppContext(
         <Wizard history={history}>
           <Steps>
-            <Step
-              id="incident/bedankt"
-              render={() => <IncidentNavigation {...props} />}
-            />
+            <Step id="incident/bedankt">
+              <IncidentNavigation {...props} />
+            </Step>
           </Steps>
         </Wizard>
       )
@@ -115,10 +111,9 @@ describe('signals/incident/components/IncidentNavigation', () => {
       withAppContext(
         <Wizard history={history}>
           <Steps>
-            <Step
-              id={steps[1]}
-              render={() => <IncidentNavigation {...props} />}
-            />
+            <Step id={steps[1]}>
+              <IncidentNavigation {...props} />
+            </Step>
           </Steps>
         </Wizard>
       )
