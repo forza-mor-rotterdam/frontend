@@ -74,9 +74,7 @@ const SwipeableSignal: FC<SignalProps> = ({ incident, priority }) => {
             </Link>
           </SignalImage>
           <SignalInfo onClick={() => openHandleModal()}>
-            {/* <Link to={detailLink} tabIndex={-1}> */}
             <h2>
-              HAAI
               <StyledIcon>
                 {getListIconByKey(priority, incident.priority?.priority)}
               </StyledIcon>{' '}
