@@ -3,22 +3,27 @@
 
 @font-face {
     font-family: 'Bolder';
-    src: local('Bolder'), url(../assets/fonts/Bolder-Regular.woff2) format('woff2');
+    src: local('Bolder'), url(../assets/fonts/Bolder-Regular.woff2) format('woff2'), url(../assets/fonts/Bolder.woff) format('woff');
 }
 
 @font-face {
     font-family: 'BolderLight';
-    src: local('BolderLight'), url(../assets/fonts/Bolder-Light.woff2) format('woff2');
+    src: local('BolderLight'), url(../assets/fonts/Bolder-Light.woff2) format('woff2'), url(../assets/fonts/Bolder-Light.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'BolderItalic';
+    src: local('BolderItalic'), url(../assets/fonts/Bolder-RegularItalic.woff2) format('woff2'), url(../assets/fonts/Bolder-RegularItalic.woff) format('woff');
 }
 
 @font-face {
     font-family: 'BolderBold';
-    src: local('BolderBold'), url(../assets/fonts/Bolder-Bold.woff2) format('woff2');
+    src: local('BolderBold'), url(../assets/fonts/Bolder-Bold.woff2) format('woff2'), url(../assets/fonts/Bolder-Bold.woff) format('woff');
 }
 
 @font-face {
     font-family: 'BolderHeading';
-    src: local('BolderHeading'), url(../assets/fonts/Bolder-Heading.woff2) format('woff2');
+    src: local('BolderHeading'), url(../assets/fonts/Bolder-Heading.woff2) format('woff2'), url(../assets/fonts/Bolder-Heading.woff) format('woff');
 }
 .col-md-6,
 .col-sm-12 {
