@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MPL-2.0
 // Copyright (C) 2021 Gemeente Amsterdam
-import { themeSpacing, Icon, themeColor } from '@remcohoff/asc-ui'
+import { Icon, themeColor } from '@remcohoff/asc-ui'
 import styled from 'styled-components'
 
 export const StyledList = styled.div<{ isLoading?: boolean }>`
@@ -10,85 +10,56 @@ export const StyledList = styled.div<{ isLoading?: boolean }>`
   ${({ isLoading }) => isLoading && 'opacity: 0.3;'}
 `
 
-export const Table = styled.table`
-  border-collapse: separate;
-  width: 100%;
-  height: 100%;
+export const SwipeableContainer = styled.div`
+  display: flex;
+  border-top: 2px solid grey;
+  font-size: 0.8rem;
 
-  tr:hover td,
-  td {
-    box-shadow: unset;
+  &:last-child {
+    border-bottom: 2px solid grey;
   }
-`
-
-export const Th = styled.th`
-  white-space: nowrap;
-`
-
-export const Tr = styled.tr`
-  :focus {
-    outline: auto;
-  }
-`
-
-export const ThParent = styled(Th)`
-  width: 45px;
-  min-height: 1px;
-`
-
-export const ThPriority = styled(Th)`
-  width: 32px;
-`
-
-export const ThDate = styled(Th)`
-  width: 150px;
-`
-
-export const ThArea = styled(Th)`
-  width: 120px;
-`
-
-export const ThSubcategory = styled(Th)`
-  width: 220px;
-`
-
-export const ThStatus = styled(Th)`
-  width: 160px;
-`
-
-export const ThId = styled(Th)`
-  width: 95px;
-`
-
-export const ThDay = styled(Th)`
-  width: 55px;
-`
-
-export const ContentSpan = styled.span``
-
-export const TdStyle = styled.td`
-  padding: 0;
-  height: 60px;
-
   a {
-    display: flex;
-    align-items: center;
-    padding: 0 ${themeSpacing(2)};
-    height: 100%;
-
     text-decoration: none;
-    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 5px 0;
+    color: inherit;
+  }
+`
 
-    ${ContentSpan} {
-      // Show ellipsis on second line
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      line-clamp: 2;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      height: auto;
+export const SignalImage = styled.div`
+  flex: 0 1 25%;
+  min-height: 100px;
+  background: gray;
+  border: 10px solid white;
+`
+
+export const SignalInfo = styled.div`
+  flex: 1;
+  h2 {
+    margin: 4px 0 0;
+
+    span {
+      display: inline;
     }
+  }
+  div {
+    display: flex;
+    justify-items: space-between;
+
+    > span {
+      flex: 1;
+
+      &: last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  .text-light {
+    color: gray;
   }
 `
 
