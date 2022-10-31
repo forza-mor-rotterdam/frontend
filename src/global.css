@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'Bolder';
-    src: local('Bolder'), url(../assets/fonts/Bolder-Regular.woff2) format('woff2'), url(../assets/fonts/Bolder.woff) format('woff');
+    src: local('Bolder'), url(../assets/fonts/Bolder-Regular.woff2) format('woff2'), url(../assets/fonts/Bolder-Regular.woff) format('woff');
 }
 
 @font-face {
